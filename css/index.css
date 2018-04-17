@@ -1,0 +1,67 @@
+.indexWrap{
+    background:url("../pic/areaCrow.png");
+    width:2048px;
+    height:1536px;
+    overflow: hidden;
+    position: relative;
+}
+.indexCir{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.indexCir.cir1{
+    background: url("../pic/indexCir1.png");
+    width:1624px;
+    height:1624px;
+    margin-left: -812px;
+    margin-top: -812px;
+    -webkit-animation:cirAniP 3s linear infinite;
+}
+.indexCir.cir2{
+    background: url("../pic/indexCir2.png");
+    width:1247px;
+    height:1247px;
+    margin-left: -639px;
+    margin-top: -639px;
+    -webkit-animation:cirAniN 3s linear infinite;
+}
+.indexCir.cir3{
+    background: url("../pic/indexCir3.png");
+    width:612px;
+    height:612px;
+    margin-left: -306px;
+    margin-top: -306px;
+    -webkit-animation:cirAniP 3s linear infinite;
+}
+
+.indexLink{
+    position: absolute;
+    right:184px;
+    bottom:112px;
+}
+.areaLink{
+    display: flex;
+    align-items: baseline;
+    font-size: 54px;
+    color: #e6e6e6;
+}
+.areaCrow{
+    background: url("../pic/areaCrowNull.png");
+    width:23px;
+    height:40px;
+    margin-right: 34px;
+}
+.areaLink:focus .areaCrow{
+    background: url("../pic/areaCrowFocus.png");
+}
+.areaLink:focus {
+    color:#00a6c4;
+}
+
+@keyframes cirAniP {
+    to { -webkit-transform: rotate(360deg) }
+}
+@keyframes cirAniN {
+    to { -webkit-transform: rotate(-360deg) }
+}
