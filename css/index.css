@@ -113,22 +113,22 @@
     width:318px;
     height:75px;
 }
-.publicTabDevice1{
+.publicTabTit1{
     background: url("../pic/publicTabDevice1.png");
 }
-.publicTabDevice2{
+.publicTabTit1a{
     background: url("../pic/publicTabDevice2.png");
 }
-.publicTabLight1{
+.publicTabTit2{
     background: url("../pic/publicTabLight1.png");
 }
-.publicTabLight2{
+.publicTabTit2a{
     background: url("../pic/publicTabLight2.png");
 }
-.publicTabElement1{
+.publicTabTit3{
     background: url("../pic/publicTabElement1.png");
 }
-.publicTabElement2{
+.publicTabTit3a{
     background: url("../pic/publicTabElement2.png");
 }
 .backIcon{
@@ -228,7 +228,6 @@
     width:1524px;
     height:1536px;
     position: absolute;
-    left: 275px;
 }
 
 /*灯光预设样式*/
@@ -271,6 +270,27 @@
     flex-direction: column;
     justify-content: space-between;
 }
-
+/*西部展项控制tab标签*/
+.elCtrlTabTitWrap{
+    display:flex;
+    width:1290px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 118px;
+    top: 89px;
+}
+.elCtrlTabTitWrap span{
+    width:158px;
+    height:90px;
+    color:#e6e6e6;
+}
+.elCtrlTabTitWrap .elCtrlTabTitAct{
+    color:#00a6c4;
+    text-decoration:underline ;
+}
 
 

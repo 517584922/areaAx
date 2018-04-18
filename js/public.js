@@ -1,8 +1,8 @@
 window.onload = function () {
     // 西区侧边栏tab切换
     var westSide = document.getElementById("WestPublicTabList").getElementsByTagName("span");
-    // var westSide = document.getElementById("WestPublicTabList").getElementsByTagName("span");
-    tab(westSide);
+    var westContainerWrap = document.getElementById("westContainerWrap").getElementsByTagName("section");
+    tab(westSide,westContainerWrap);
 
     // 西区灯光预设
     var largeBtn = document.getElementById("westLight").getElementsByTagName("span");
@@ -16,16 +16,24 @@ window.onload = function () {
 };
 
 //侧边栏tab切换
-function tab (tabList) {
+function tab (tabList,tabContainer) {
     for (var i=0;i<tabList.length;i++){
         tabList[i].index = i;
         tabList[i].onclick = function () {
+            // tab标题效果切换
             var classArr = this.className.split(" ")[0];
-            var changeClass = classArr.substring(0,classArr.length-1)+"2";
+            var addClass = classArr.substring(0,classArr.length)+"a";
             for (var j=0;j<tabList.length;j++){
+                var e = j+1;
+                var changeClass = classArr.substring(0,classArr.length-1)+e+"a";
                 tabList[j].classList.remove(changeClass);
+                tabContainer[j].style.display = "none";
             }
-        }
+            this.classList.add(addClass);
+
+            // tab内容切换
+            tabContainer[this.index].style.display = "block";
+        };
     }
 }
 
