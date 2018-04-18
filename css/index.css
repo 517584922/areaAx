@@ -142,6 +142,95 @@
     border-bottom: 2px solid #e6e6e6;
 }
 
+/*公用按钮样式*/
+.doubleBtnWrap{
+    display: flex;
+    justify-content: space-between;
+}
+.doubleBtn{
+    display: flex;
+    justify-content: space-between;
+    width:721px;
+}
+.btnDefault{
+    background: #e6e6e6;
+    color: #00a6c4;
+}
+.btnActive{
+    background: #00a6c4;
+    color: #e6e6e6;
+}
+
+.largeBtn{
+    width:300px;
+    height:86px;
+    border-radius: 10px;
+    line-height: 86px;
+    font-size: 34px;
+    text-align: center;
+}
+.smallBtn{
+    width:160px;
+    height:86px;
+    border-radius: 10px;
+    line-height: 86px;
+    font-size: 34px;
+    text-align: center;
+}
+.btnTitle{
+    width:140px;
+    height:86px;
+    font-size: 34px;
+    line-height: 86px;
+    color: #e6e6e6;
+    letter-spacing: 1px;
+}
+.adjustBtn{
+    display: flex;
+    justify-content: space-between;
+}
+.voiceControl{
+    width:721px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adjustWrap{
+    display: flex;
+    justify-content: space-between;
+    width:160px;
+    height:46px;
+}
+.adjustWrap span{
+    width:12px;
+    height:46px;
+    border-radius: 5px;
+    background: #e6e6e6;
+}
+.adjustWrap .volAct{
+    background: #00a6c4;
+}
+.volDown:focus{
+    color:#e6e6e6;
+    background: #00a6c4;
+}
+.volUp:focus{
+    color:#e6e6e6;
+    background: #00a6c4;
+}
+.containerWrap{
+    width:1524px;
+    height:1536px;
+    position: absolute;
+    left: 524px;
+}
+.interactiveWrap{
+    width:1524px;
+    height:1536px;
+    position: absolute;
+    left: 275px;
+}
+
 /*灯光预设样式*/
 .publicLightWrap{
     width:300px;
@@ -152,6 +241,7 @@
     position: absolute;
     right:600px;
     top: 355px;
+    cursor: pointer;
 }
 
 .publicLightWrap span{
@@ -168,3 +258,19 @@
     background: #00a6c4;
     color: #e6e6e6;
 }
+
+/*设备控制*/
+.publicDevice{
+    display: flex;
+    width:966px;
+    height:302px;
+    position: absolute;
+    left: 275px;
+    top: 617px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+

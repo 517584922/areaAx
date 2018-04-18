@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="publicWrap">
-        <!--侧边栏-->
-        <span class="publicTit">东区展厅</span>
-        <div class="publicTabList">
-            <span class="publicTabDevice2"></span>
+
+        <!--西区侧边栏-->
+        <span class="publicTit">西区展厅</span>
+        <!--西区侧边栏tab切换-->
+        <div class="publicTabList" id="WestPublicTabList">
+            <span class="publicTabDevice1 publicTabDevice2"></span>
             <span class="publicTabLight1"></span>
             <span class="publicTabElement1"></span>
         </div>
@@ -19,14 +21,54 @@
             <span class="backIcon"></span>
             <span class="backText">返回首页</span>
         </div>
-        <!--灯光预设-->
-        <div class="publicLightWrap">
-            <span class="lightClick">灯光全开</span>
-            <span>灯光全关</span>
-            <span>参观模式</span>
-            <span>清洁模式</span>
-            <span>无参观待机</span>
+
+        <!--西区功能区-->
+        <div class="containerWrap" id="westContainerWrap">
+            <!--西区设备控制-->
+            <div style="display: block;">
+                <div class="publicDevice">
+                    <!--西区全设备开关-->
+                    <div id="doubleBtn01" class="doubleBtnWrap">
+                        <span class="btnTitle"></span>
+                        <div class="doubleBtn">
+                            <span class="largeBtn btnDefault btnActive">设备全开</span>
+                            <span class="largeBtn btnDefault">设备全关</span>
+                        </div>
+                    </div>
+                    <!--西区讲解音量-->
+                    <div class="adjustBtn">
+                        <span class="btnTitle">讲解系统</span>
+                        <div class="voiceControl">
+                            <a class="smallBtn btnDefault volDown" onclick="downVol(volControl1)">-</a>
+                            <span class="adjustWrap" id="adjustWrap">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </span>
+                            <a class="smallBtn btnDefault volUp" onclick="addVol(volControl1)">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--西区灯光预设-->
+            <div style="display: none;">
+                <div id="westLight" class="publicLightWrap">
+                    <span class="lightClick">灯光全开</span>
+                    <span>灯光全关</span>
+                    <span>参观模式</span>
+                    <span>清洁模式</span>
+                    <span>无参观待机</span>
+                </div>
+            </div>
+            <!--西区展项控制-->
+            <div style="display: none;">
+                <div class="interactiveWrap">
+
+                </div>
+            </div>
+
         </div>
+
     </div>
+    <script src="js/public.js"></script>
 </body>
 </html>

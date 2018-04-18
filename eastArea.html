@@ -5,19 +5,64 @@
     <title>Title</title>
     <style>
         .aa{
-            width:100px;
-            height:20px;
-            background:black;
-            border-radius: 5px;
-            margin: 10px;
+            display: flex;
+            width:500px;
+            height:200px;
+            justify-content: space-between;
         }
-        .aa:focus{
+        .bb{
+            width:200px;
+            height:200px;
+        }
+        .bb:focus{
+            background: #000;
+        }
+        .cc{
             background:red;
+        }
+        .dd{
+            background:yellow;
         }
     </style>
 </head>
 <body>
-    <div class="aa"></div>
-    <div class="aa"></div>
+<div class="aa">
+    <span class="bb cc">1</span>
+    <span class="bb cc">2</span>
+</div>
+<script>
+    function getClass (classname,obj) {
+        var obj=obj||document;
+        var arr=[];
+        if(obj.getElementsByClassName){
+            return obj.getElementsByClassName(classname);
+        }else{
+            var all=obj.getElementsByTagName("*");
+            for (var i=0; i<all.length; i++) {
+                if(checkClass(all[i].className,classname)){
+                    arr.push(all[i]);
+                }
+            }
+            return arr;
+        }
+    }
+
+    window.onload = function () {
+        var largeBtn = getClass("aa")[0].getElementsByTagName("span");
+        var largeAct = "dd";
+        btnActive(largeBtn,largeAct);
+    };
+    function btnActive(btn,act) {
+        for (var i=0;i<btn.length;i++){
+            btn[i].index = i;
+            btn[i].onclick = function () {
+                for (var j=0;j<btn.length;j++){
+                    btn[j].classList.remove(act);
+                    this.classList.add(act)
+                }
+            }
+        }
+    }
+</script>
 </body>
 </html>
