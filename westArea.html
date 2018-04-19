@@ -39,11 +39,11 @@
                     <div class="adjustBtn">
                         <span class="btnTitle">讲解系统</span>
                         <div class="voiceControl">
-                            <a class="smallBtn btnDefault volDown" onclick="downVol(volControl1)">-</a>
+                            <a class="smallBtn btnDefault volDown" onclick="downVol(volControl1,volNum1)">-</a>
                             <span class="adjustWrap" id="adjustWrap">
                         <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                     </span>
-                            <a class="smallBtn btnDefault volUp" onclick="addVol(volControl1)">+</a>
+                            <a class="smallBtn btnDefault volUp" onclick="addVol(volControl1,volNum1)">+</a>
                         </div>
                     </div>
                 </div>
@@ -61,14 +61,478 @@
             <!--西区展项控制-->
             <section style="display: none;">
                 <div class="interactiveWrap">
-                    <div class="elCtrlTabTitWrap">
-                        <span class="elCtrlTabTitAct">序厅/<br>发展历程</span>
-                        <span>清洁能源产业链</span>
-                        <span>开启能源物联时代</span>
-                        <span>泛能网<br>平台</span>
-                        <span>美丽生态</span>
-                        <span>企业文化</span>
+
+                    <!--西部展项控制tab标题-->
+                    <div id="elCtrlTabTitWrap" class="elCtrlTabTitWrap">
+                        <span class="elCtrlTabTit elCtrlTabTita">序厅/<br>发展历程</span>
+                        <span class="elCtrlTabTit">清洁能源产业链</span>
+                        <span class="elCtrlTabTit">开启能源物联时代</span>
+                        <span class="elCtrlTabTit">泛能网<br>平台</span>
+                        <span class="elCtrlTabTit">美丽生态</span>
+                        <span class="elCtrlTabTit">企业文化</span>
                     </div>
+
+                    <div id="westCtrlWrap">
+                        <!--西部序厅内容页面-->
+                        <section style="display: block;">
+                            <div class="ctrlWrap">
+                                <div class="publicMore">
+                                    <span class="line"></span>
+                                    <span class="more" id="westLobbyMore" onclick="moreTab(westLobbyMore,westLobbyColumn1,westLobbyColumn2)"></span>
+                                </div>
+                                <div id="westLobbyColumn1" >
+                                    <div class="westLobbyColumn1">
+                                        <div id="doubleBtn02" class="doubleBtnWrap">
+                                            <span class="btnTitle">电动门</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div class="player">
+                                            <span class="playerTitle">序厅影片</span>
+                                            <div class="playerBtn">
+                                                <div class="playerCtrl">
+                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                </div>
+                                                <div class="voiceControl">
+                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl2,volNum2)">-</a>
+                                                    <span class="adjustWrap" id="adjustWrap01">
+                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                        </span>
+                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl2,volNum2)">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn03" class="doubleBtnWrap">
+                                            <span class="btnTitle">发展历程射灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="westLobbyColumn2" style="display: none;">
+                                    <div class="westLobbyColumn2">
+                                        <div id="doubleBtn04" class="doubleBtnWrap">
+                                            <span class="btnTitle">筒灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn05" class="doubleBtnWrap">
+                                            <span class="btnTitle">造型灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn06" class="doubleBtnWrap">
+                                            <span class="btnTitle">电脑</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn07" class="doubleBtnWrap">
+                                            <span class="btnTitle">拼接屏</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--西部清洁能源产业链内容页面-->
+                        <section style="display: none;">
+                            <div class="ctrlWrap">
+                                <div class="publicMore">
+                                    <span class="line"></span>
+                                    <span class="more" id="westEnergyMore" onclick="moreTab(westEnergyMore,westEnergyColumn1,westEnergyColumn2)"></span>
+                                </div>
+                                <div id="westEnergyColumn1">
+                                    <div class="westEnergyColumn1">
+
+                                    </div>
+                                </div>
+                                <div id="westEnergyColumn2">
+                                    <div class="westEnergyColumn2">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--开启能源物联时代内容页面-->
+                        <section style="display: none;">
+                            <div class="ctrlWrap">
+                                <div class="publicMore">
+                                    <span class="line"></span>
+                                    <span class="more" id="westLiveLabMore" onclick="moreTab(westLiveLabMore,westLiveLabColumn1,westLiveLabColumn2)"></span>
+                                </div>
+                                <div id="westLiveLabColumn1">
+                                    <div class="westLiveLabColumn1">
+                                        <div class="lightCtrlWrap">
+                                            <span class="lightCtrl">透明屏：</span>
+                                            <div id="doubleBtn08" class="doubleBtnWrap">
+                                                <span class="btnTitle">射灯</span>
+                                                <div class="doubleBtn">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lightCtrlWrap">
+                                            <span class="lightCtrl">商用泛能机：</span>
+                                            <div id="doubleBtn09" class="doubleBtnWrap">
+                                                <span class="btnTitle">射灯</span>
+                                                <div class="doubleBtn">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="player">
+                                            <span class="playerTitle">泛能装备</span>
+                                            <div class="playerBtn">
+                                                <div class="playerCtrl">
+                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                </div>
+                                                <div class="voiceControl">
+                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl3,volNum3)">-</a>
+                                                    <span class="adjustWrap" id="adjustWrap02">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl3,volNum3)">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="westLiveLabColumn2" style="display: none;">
+                                    <div class="westLiveLabColumn2">
+                                        <div class="lightCtrlWrap">
+                                            <span class="lightCtrl">电脑控制：</span>
+                                            <div id="doubleBtn10" class="doubleBtnWrap">
+                                                <span class="btnTitle">智能燃气表</span>
+                                                <div class="doubleBtn">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn11" class="doubleBtnWrap">
+                                            <span class="btnTitle">石墨烯材料</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn12" class="doubleBtnWrap">
+                                            <span class="btnTitle">微型燃气轮机</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div class="lightCtrlWrap">
+                                            <span class="lightCtrl">电视控制：</span>
+                                            <div id="doubleBtn13" class="doubleBtnWrap">
+                                                <span class="btnTitle">泛能装备</span>
+                                                <div class="doubleBtn">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--泛能网平台内容页面-->
+                        <section style="display: none;">
+                            <div class="ctrlWrap">
+                                <div class="publicMore">
+                                    <span class="line"></span>
+                                    <span class="more" id="westForumMore" onclick="moreTab(westForumMore,westForumColumn1,westForumColumn2)"></span>
+                                </div>
+                                <div id="westForumColumn1">
+                                    <div class="westLiveLabColumn1">
+                                        <div id="doubleBtn14" class="doubleBtnWrap">
+                                            <span class="btnTitle">筒灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn15" class="doubleBtnWrap">
+                                            <span class="btnTitle">造型灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn16" class="doubleBtnWrap">
+                                            <span class="btnTitle">前射灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn17" class="doubleBtnWrap">
+                                            <span class="btnTitle">后射灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div class="player">
+                                            <span class="playerTitle">泛能网影片</span>
+                                            <div class="playerBtn">
+                                                <div class="playerCtrl">
+                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                </div>
+                                                <div class="voiceControl">
+                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl4,volNum4)">-</a>
+                                                    <span class="adjustWrap" id="adjustWrap03">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl4,volNum4)">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="westForumColumn2" style="display: none;">
+                                    <div class="westLiveLabColumn2">
+                                        <div class="doubleBtnWrap">
+                                            <span class="btnTitle">电脑主机：</span>
+                                            <div class="doubleBtn">
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn18" class="doubleBtnWrap">
+                                            <span class="btnTitle">LED弧屏</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn19" class="doubleBtnWrap">
+                                            <span class="btnTitle">LED地坪</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn20" class="doubleBtnWrap">
+                                            <span class="btnTitle">LED左柱</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn21" class="doubleBtnWrap">
+                                            <span class="btnTitle">LED右柱</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn22" class="doubleBtnWrap">
+                                            <span class="btnTitle">触摸屏</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--美丽生态内容页面-->
+                        <section style="display: none;">
+                            <div class="ctrlWrap">
+                                <div class="publicMore">
+                                    <span class="line"></span>
+                                    <span class="more" id="westEcologyMore" onclick="moreTab(westEcologyMore,westEcologyColumn1,westEcologyColumn2)"></span>
+                                </div>
+                                <div id="westEcologyColumn1">
+                                    <div class="westEcologyColumn1">
+                                        <div id="doubleBtn23" class="doubleBtnWrap">
+                                            <span class="btnTitle">射灯</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div class="player">
+                                            <span class="playerTitle">前沿技术</span>
+                                            <div class="playerBtn">
+                                                <div class="playerCtrl">
+                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                </div>
+                                                <div class="voiceControl">
+                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl5,volNum5)">-</a>
+                                                    <span class="adjustWrap" id="adjustWrap04">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl5,volNum5)">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="player">
+                                            <span class="playerTitle">环境治理</span>
+                                            <div class="playerBtn">
+                                                <div class="playerCtrl">
+                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                </div>
+                                                <div class="voiceControl">
+                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl6,volNum6)">-</a>
+                                                    <span class="adjustWrap" id="adjustWrap05">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl6,volNum6)">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="westEcologyColumn2" style="display: none;">
+                                    <div class="westEcologyColumn2">
+                                        <span class="line2"></span>
+                                        <div class="columnWrap">
+                                            <div class="doubleBtnWrap">
+                                                <span class="btnTitle">前沿技术：</span>
+                                            </div>
+                                            <div id="doubleBtn24" class="doubleBtnWrap">
+                                                <span class="btnTitle">雷达眼电脑</span>
+                                                <div class="doubleBtn" style="width:398px;">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                            <div id="doubleBtn25" class="doubleBtnWrap">
+                                                <span class="btnTitle">触摸屏电脑</span>
+                                                <div class="doubleBtn" style="width:398px;">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                            <div id="doubleBtn26" class="doubleBtnWrap">
+                                                <span class="btnTitle">投影</span>
+                                                <div class="doubleBtn" style="width:398px;">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="columnWrap">
+                                            <div class="doubleBtnWrap">
+                                                <span class="btnTitle">环境治理：</span>
+                                            </div>
+                                            <div id="doubleBtn27" class="doubleBtnWrap">
+                                                <span class="btnTitle">雷达眼电脑</span>
+                                                <div class="doubleBtn" style="width:398px;">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                            <div id="doubleBtn28" class="doubleBtnWrap">
+                                                <span class="btnTitle">触摸屏电脑</span>
+                                                <div class="doubleBtn" style="width:398px;">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                            <div id="doubleBtn29" class="doubleBtnWrap">
+                                                <span class="btnTitle">投影</span>
+                                                <div class="doubleBtn" style="width:398px;">
+                                                    <span class="smallBtn btnDefault btnActive">ON</span>
+                                                    <span class="smallBtn btnDefault">OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--企业文化内容页面-->
+                        <section style="display: none;">
+                            <div class="ctrlWrap">
+                                <div class="publicMore">
+                                    <span class="line"></span>
+                                    <span class="more" id="westCultureMore" onclick="moreTab(westCultureMore,westCultureColumn1,westCultureColumn2)"></span>
+                                </div>
+                                <div id="westCultureColumn1">
+                                    <div class="westCultureColumn1">
+                                        <div id="doubleBtn09" class="doubleBtnWrap">
+                                            <span class="btnTitle">灯光</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                        <div class="player">
+                                            <span class="playerTitle">企业文化</span>
+                                            <div class="playerBtn">
+                                                <div class="playerCtrl">
+                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                </div>
+                                                <div class="voiceControl">
+                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl3)">-</a>
+                                                    <span class="adjustWrap" id="adjustWrap02">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl3)">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="doubleBtn09" class="doubleBtnWrap">
+                                            <span class="btnTitle">电动门</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="westCultureColumn2" style="display: none;">
+                                    <div class="westCultureColumn2">
+                                        <div id="doubleBtn09" class="doubleBtnWrap">
+                                            <span class="btnTitle">电视</span>
+                                            <div class="doubleBtn">
+                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                <span class="smallBtn btnDefault">OFF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
                 </div>
             </section>
 

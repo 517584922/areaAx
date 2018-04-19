@@ -178,12 +178,11 @@
     text-align: center;
 }
 .btnTitle{
-    width:140px;
+    width:252px;
     height:86px;
     font-size: 34px;
     line-height: 86px;
     color: #e6e6e6;
-    letter-spacing: 1px;
 }
 .adjustBtn{
     display: flex;
@@ -229,6 +228,14 @@
     height:1536px;
     position: absolute;
 }
+.ctrlWrap{
+    width:1525px;
+    height:1300px;
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
 
 /*灯光预设样式*/
 .publicLightWrap{
@@ -257,7 +264,86 @@
     background: #00a6c4;
     color: #e6e6e6;
 }
-
+.publicMore{
+    width:1428px;
+    height:80px;
+    position: absolute;
+    left: 30px;
+}
+.line{
+    background: url("../pic/line.png");
+    width:1348px;
+    height:4px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+}
+.more,.moreA{
+    width:80px;
+    height:80px;
+    position: absolute;
+    right:0;
+    top: 0;
+}
+.more{
+    background: url("../pic/more.png");
+}
+.moreA{
+    background: url("../pic/moreA.png");
+}
+.player{
+    width:974px;
+    height:262px;
+    display: flex;
+    justify-items: center;
+}
+.playerTitle{
+    font-size: 34px;
+    line-height: 262px;
+    color: #e6e6e6;
+    width:252px;
+    height:262px;
+    background:url("../pic/playerTitBg.png") no-repeat;
+}
+.playerBtn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.playerCtrl{
+    width: 721px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playBtnDefault1{
+    background: url("../pic/playBtnDefault1.png");
+}
+.playBtnDefault1a{
+    background: url("../pic/playBtnDefault1.png");
+}
+.playBtnDefault2{
+    background: url("../pic/playBtnDefault2.png");
+}.playBtnDefault2a{
+     background: url("../pic/playBtnDefault2a.png");
+ }
+.playBtnDefault3{
+    background: url("../pic/playBtnDefault3.png");
+}.playBtnDefault3a {
+     background: url("../pic/playBtnDefault3a.png");
+ }
+ .lightCtrlWrap{
+     height:180px;
+     width:974px;
+     display: flex;
+     flex-direction: column;
+ }
+ .lightCtrl{
+     width:974px;
+     height:90px;
+     font-size: 34px;
+     color: #e6e6e6;
+ }
 /*设备控制*/
 .publicDevice{
     display: flex;
@@ -281,16 +367,120 @@
     letter-spacing: 1px;
     position: absolute;
     left: 118px;
-    top: 89px;
+    top: 112px;
 }
-.elCtrlTabTitWrap span{
+.elCtrlTabTit{
     width:158px;
     height:90px;
     color:#e6e6e6;
 }
-.elCtrlTabTitWrap .elCtrlTabTitAct{
+.elCtrlTabTita{
     color:#00a6c4;
     text-decoration:underline ;
 }
-
-
+/*西部序厅内容页面*/
+.westLobbyColumn1,.westLobbyColumn2{
+    position: absolute;
+    left: 257px;
+    top: 264px;
+    width:974px;
+    height:690px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*西部清洁能源产业链内容页面*/
+.westLobbyColumn1,.westLobbyColumn2{
+    position: absolute;
+    left: 257px;
+    top: 264px;
+    width:974px;
+    height:690px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*西部开启能源物联时代内容页面*/
+.westLiveLabColumn1,.westLiveLabColumn2{
+    position: absolute;
+    left: 257px;
+    top: 170px;
+    width:974px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.westLiveLabColumn1{
+    height:942px;
+}
+.westLiveLabColumn2{
+    height:853px;
+}
+/*西部泛能网平台内容页面*/
+.westForumColumn1,.westForumColumn2{
+    position: absolute;
+    left: 257px;
+    top: 264px;
+    width:974px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.westForumColumn1{
+    height:1000px;
+}
+.westForumColumn2{
+    height:950px;
+}
+/*西部美丽生态内容页面*/
+.westEcologyColumn1{
+    position: absolute;
+    left: 257px;
+    top: 210px;
+    width:974px;
+    height:848px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.westEcologyColumn2{
+    position: absolute;
+    left: 66px;
+    top: 160px;
+    width:1400px;
+    height:716px;
+    display: flex;
+    justify-content: space-between;
+}
+.columnWrap{
+    width:650px;
+    height:716px;
+    display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+}
+.line2{
+    width:4px;
+    height:767px;
+    position: absolute;
+    left: 700px;
+    top: 80px;
+    background: url("../pic/line2.png");
+}
+/*西部企业文化内容页面*/
+.westCultureColumn1,.westCultureColumn2{
+    position: absolute;
+    left: 257px;
+    width:974px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.westCultureColumn1{
+    top: 264px;
+    height:700px;
+}
+.westCultureColumn2{
+    top: 570px;
+    height:86px;
+}
