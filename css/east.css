@@ -1,0 +1,85 @@
+/*东部设备控制*/
+.eastDevice{
+    display: flex;
+    width:966px;
+    height:1140px;
+    position: absolute;
+    left: 275px;
+    top: 205px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.eastCtrlWrap{
+    height:720px;
+    width:974px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*东部展项控制tab标题*/
+.eastCtrlTabTitWrap {
+    display: flex;
+    width: 1290px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 118px;
+    top: 112px;
+    background: url("../pic/ctrlTitLine2.png");
+}
+.eastCtrlTabTit{
+    width:258px;
+    height:90px;
+    color:#e6e6e6;
+}
+.eastCtrlTabTita{
+    color:#00a6c4;
+    text-decoration:underline ;
+}
+/*东部序厅内容页面*/
+.eastLobbyColumn{
+    width:974px;
+    height:615px;
+    position: absolute;
+    left: 257px;
+    top: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*箭头列表生活定位*/
+.crowLive{
+    position: absolute;
+    left: 257px;
+    top: 153px;
+}
+.crowLive span{
+    width:370px;
+    height:40px;
+    display: flex;
+    align-items: baseline;
+}
+.lifeCrowColumn1{
+    position: absolute;
+    justify-content: space-between;
+    width:974px;
+    height:705px;
+    left: 247px;
+    top: 343px;
+    display: flex;
+    flex-direction: column;
+}
+.lifeCrowColumn2{
+    position: absolute;
+    justify-content: space-between;
+    width:974px;
+    height:518px;
+    left: 247px;
+    top: 343px;
+    display: flex;
+    flex-direction: column;
+}

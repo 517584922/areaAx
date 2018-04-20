@@ -114,16 +114,16 @@
     height:75px;
 }
 .publicTabTit1{
-    background: url("../pic/publicTabDevice1.png");
-}
-.publicTabTit1a{
-    background: url("../pic/publicTabDevice2.png");
-}
-.publicTabTit2{
     background: url("../pic/publicTabLight1.png");
 }
-.publicTabTit2a{
+.publicTabTit1a{
     background: url("../pic/publicTabLight2.png");
+}
+.publicTabTit2{
+    background: url("../pic/publicTabDevice1.png");
+}
+.publicTabTit2a{
+    background: url("../pic/publicTabDevice2.png");
 }
 .publicTabTit3{
     background: url("../pic/publicTabElement1.png");
@@ -320,7 +320,7 @@
     background: url("../pic/playBtnDefault1.png");
 }
 .playBtnDefault1a{
-    background: url("../pic/playBtnDefault1.png");
+    background: url("../pic/playBtnDefault1a.png");
 }
 .playBtnDefault2{
     background: url("../pic/playBtnDefault2.png");
@@ -333,7 +333,7 @@
      background: url("../pic/playBtnDefault3a.png");
  }
  .lightCtrlWrap{
-     height:180px;
+     height:178px;
      width:974px;
      display: flex;
      flex-direction: column;
@@ -344,18 +344,7 @@
      font-size: 34px;
      color: #e6e6e6;
  }
-/*设备控制*/
-.publicDevice{
-    display: flex;
-    width:966px;
-    height:302px;
-    position: absolute;
-    left: 275px;
-    top: 617px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 /*西部展项控制tab标签*/
 .elCtrlTabTitWrap{
     display:flex;
@@ -368,6 +357,7 @@
     position: absolute;
     left: 118px;
     top: 112px;
+    background: url("../pic/ctrlTitLine.png");
 }
 .elCtrlTabTit{
     width:158px;
@@ -483,4 +473,36 @@
 .westCultureColumn2{
     top: 570px;
     height:86px;
+}
+
+/*西部设备控制*/
+.publicDevice{
+    display: flex;
+    width:966px;
+    height:302px;
+    position: absolute;
+    left: 275px;
+    top: 617px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*东部设备控制*/
+.eastDevice{
+    display: flex;
+    width:966px;
+    height:1140px;
+    position: absolute;
+    left: 275px;
+    top: 205px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.eastCtrlWrap{
+    height:720px;
+    width:974px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

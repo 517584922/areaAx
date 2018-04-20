@@ -1,10 +1,11 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>westArea</title>
     <link rel="stylesheet" href="css/initialize.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/west.css">
 </head>
 <body>
     <div class="publicWrap">
@@ -24,9 +25,19 @@
 
         <!--西区功能区-->
         <div class="containerWrap" id="westContainerWrap">
-            <!--西区设备控制-->
+            <!--西区灯光预设-->
             <section style="display: block;">
-                <div class="publicDevice">
+                <div id="westLight" class="publicLightWrap">
+                    <span class="lightClick">灯光全开</span>
+                    <span>灯光全关</span>
+                    <span>参观模式</span>
+                    <span>清洁模式</span>
+                    <span>无参观待机</span>
+                </div>
+            </section>
+            <!--西区设备控制-->
+            <section style="display: none;">
+                <div class="westDevice">
                     <!--西区全设备开关-->
                     <div id="doubleBtn01" class="doubleBtnWrap">
                         <span class="btnTitle"></span>
@@ -48,28 +59,18 @@
                     </div>
                 </div>
             </section>
-            <!--西区灯光预设-->
-            <section style="display: none;">
-                <div id="westLight" class="publicLightWrap">
-                    <span class="lightClick">灯光全开</span>
-                    <span>灯光全关</span>
-                    <span>参观模式</span>
-                    <span>清洁模式</span>
-                    <span>无参观待机</span>
-                </div>
-            </section>
             <!--西区展项控制-->
             <section style="display: none;">
                 <div class="interactiveWrap">
 
                     <!--西部展项控制tab标题-->
-                    <div id="elCtrlTabTitWrap" class="elCtrlTabTitWrap">
-                        <span class="elCtrlTabTit elCtrlTabTita">序厅/<br>发展历程</span>
-                        <span class="elCtrlTabTit">清洁能源产业链</span>
-                        <span class="elCtrlTabTit">开启能源物联时代</span>
-                        <span class="elCtrlTabTit">泛能网<br>平台</span>
-                        <span class="elCtrlTabTit">美丽生态</span>
-                        <span class="elCtrlTabTit">企业文化</span>
+                    <div id="elCtrlTabTitWrap" class="westCtrlTabTitWrap">
+                        <span class="westCtrlTabTit westCtrlTabTita">序厅/<br>发展历程</span>
+                        <span class="westCtrlTabTit">清洁能源产业链</span>
+                        <span class="westCtrlTabTit">开启能源物联时代</span>
+                        <span class="westCtrlTabTit">泛能网<br>平台</span>
+                        <span class="westCtrlTabTit">美丽生态</span>
+                        <span class="westCtrlTabTit">企业文化</span>
                     </div>
 
                     <div id="westCtrlWrap">
@@ -92,7 +93,7 @@
                                         <div class="player">
                                             <span class="playerTitle">序厅影片</span>
                                             <div class="playerBtn">
-                                                <div class="playerCtrl">
+                                                <div class="playerCtrl" id="movie01">
                                                     <span class="smallBtn playBtnDefault1"></span>
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
@@ -100,8 +101,8 @@
                                                 <div class="voiceControl">
                                                     <a class="smallBtn btnDefault volDown" onclick="downVol(volControl2,volNum2)">-</a>
                                                     <span class="adjustWrap" id="adjustWrap01">
-                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                        </span>
+                                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                    </span>
                                                     <a class="smallBtn btnDefault volUp" onclick="addVol(volControl2,volNum2)">+</a>
                                                 </div>
                                             </div>
@@ -202,7 +203,7 @@
                                         <div class="player">
                                             <span class="playerTitle">泛能装备</span>
                                             <div class="playerBtn">
-                                                <div class="playerCtrl">
+                                                <div class="playerCtrl" id="movie02">
                                                     <span class="smallBtn playBtnDefault1"></span>
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
@@ -300,7 +301,7 @@
                                         <div class="player">
                                             <span class="playerTitle">泛能网影片</span>
                                             <div class="playerBtn">
-                                                <div class="playerCtrl">
+                                                <div class="playerCtrl" id="movie03">
                                                     <span class="smallBtn playBtnDefault1"></span>
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
@@ -382,7 +383,7 @@
                                         <div class="player">
                                             <span class="playerTitle">前沿技术</span>
                                             <div class="playerBtn">
-                                                <div class="playerCtrl">
+                                                <div class="playerCtrl" id="movie04">
                                                     <span class="smallBtn playBtnDefault1"></span>
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
@@ -399,7 +400,7 @@
                                         <div class="player">
                                             <span class="playerTitle">环境治理</span>
                                             <div class="playerBtn">
-                                                <div class="playerCtrl">
+                                                <div class="playerCtrl" id="movie05">
                                                     <span class="smallBtn playBtnDefault1"></span>
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
@@ -484,7 +485,7 @@
                                 </div>
                                 <div id="westCultureColumn1">
                                     <div class="westCultureColumn1">
-                                        <div id="doubleBtn09" class="doubleBtnWrap">
+                                        <div id="doubleBtn30" class="doubleBtnWrap">
                                             <span class="btnTitle">灯光</span>
                                             <div class="doubleBtn">
                                                 <span class="smallBtn btnDefault btnActive">ON</span>
@@ -494,7 +495,7 @@
                                         <div class="player">
                                             <span class="playerTitle">企业文化</span>
                                             <div class="playerBtn">
-                                                <div class="playerCtrl">
+                                                <div class="playerCtrl" id="movie06">
                                                     <span class="smallBtn playBtnDefault1"></span>
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
@@ -508,7 +509,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="doubleBtn09" class="doubleBtnWrap">
+                                        <div id="doubleBtn31" class="doubleBtnWrap">
                                             <span class="btnTitle">电动门</span>
                                             <div class="doubleBtn">
                                                 <span class="smallBtn btnDefault btnActive">ON</span>
@@ -519,7 +520,7 @@
                                 </div>
                                 <div id="westCultureColumn2" style="display: none;">
                                     <div class="westCultureColumn2">
-                                        <div id="doubleBtn09" class="doubleBtnWrap">
+                                        <div id="doubleBtn32" class="doubleBtnWrap">
                                             <span class="btnTitle">电视</span>
                                             <div class="doubleBtn">
                                                 <span class="smallBtn btnDefault btnActive">ON</span>
@@ -539,6 +540,7 @@
         </div>
 
     </div>
-    <script src="js/public.js"></script>
+    <script src="js/publicFunction.js"></script>
+    <script src="js/westLoad.js"></script>
 </body>
 </html>
