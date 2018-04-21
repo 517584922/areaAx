@@ -21,20 +21,23 @@
 .eastCtrlTabTitWrap {
     display: flex;
     width: 1290px;
+    height: 90px;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     font-size: 38px;
     text-align: center;
     letter-spacing: 1px;
     position: absolute;
     left: 118px;
     top: 112px;
-    background: url("../pic/ctrlTitLine2.png");
+    background: url(../pic/ctrlTitLine2.png);
 }
 .eastCtrlTabTit{
     width:258px;
     height:90px;
     color:#e6e6e6;
+    display: flex;
+    flex-direction: column;
 }
 .eastCtrlTabTita{
     color:#00a6c4;
@@ -63,6 +66,7 @@
     display: flex;
     align-items: baseline;
 }
+/*品质生活*/
 .lifeCrowColumn1{
     position: absolute;
     justify-content: space-between;
@@ -82,4 +86,88 @@
     top: 343px;
     display: flex;
     flex-direction: column;
+}
+.lifeColumn{
+    width:974px;
+    height:86px;
+    position: absolute;
+    top: 370px;
+    left: 247px;
+}
+/*家庭服务与健康平台*/
+.eastHomeColumn1{
+    position: absolute;
+    left: 247px;
+    top: 134px;
+    width: 974px;
+    height: 1013px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.eastHomeColumn2{
+    position: absolute;
+    left: 247px;
+    top: 134px;
+    width: 974px;
+    height: 588px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*智慧企业*/
+.eastCompany1{
+    position: absolute;
+    left: 247px;
+    top: 364px;
+    width: 974px;
+    height: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.eastCompany2{
+    position: absolute;
+    left: 247px;
+    top: 252px;
+    width: 974px;
+    height: 616px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*社会责任*/
+.crowSocial{
+    width:974px;
+    position: absolute;
+    left: 257px;
+    top: 153px
+}
+.SocialCrowColumn{
+    position: absolute;
+    left: 247px;
+    top: 300px;
+    width:974px;
+    height:266px;
+}
+.crowSocialColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 247px;
+    top: 700px;
+    width:974px;
+    height:438px;
+}
+.SocialColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 247px;
+    top: 247px;
+    width:974px;
+    height:604px;
 }

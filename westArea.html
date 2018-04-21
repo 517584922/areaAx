@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="publicWrap">
-
         <!--西区侧边栏-->
         <span class="publicTit">西区展厅</span>
         <!--西区侧边栏tab切换-->
@@ -19,8 +18,10 @@
             <span class="publicTabTit3"></span>
         </div>
         <div class="publicBack">
-            <span class="backIcon"></span>
-            <span class="backText">返回首页</span>
+            <a class="back" href="index.html">
+                <span class="backIcon"></span>
+                <span class="backText">返回首页</span>
+            </a>
         </div>
 
         <!--西区功能区-->
@@ -49,12 +50,12 @@
                     <!--西区讲解音量-->
                     <div class="adjustBtn">
                         <span class="btnTitle">讲解系统</span>
-                        <div class="voiceControl">
-                            <a class="smallBtn btnDefault volDown" onclick="downVol(volControl1,volNum1)">-</a>
-                            <span class="adjustWrap" id="adjustWrap">
-                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                    </span>
-                            <a class="smallBtn btnDefault volUp" onclick="addVol(volControl1,volNum1)">+</a>
+                        <div class="voiceControl" id="westVolCtrl01">
+                            <a class="volDown smallBtn btnDefault">-</a>
+                            <span class="adjustWrap" id="westVolLine01">
+                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            </span>
+                            <a class="volUp smallBtn btnDefault">+</a>
                         </div>
                     </div>
                 </div>
@@ -65,12 +66,12 @@
 
                     <!--西部展项控制tab标题-->
                     <div id="elCtrlTabTitWrap" class="westCtrlTabTitWrap">
-                        <span class="westCtrlTabTit westCtrlTabTita">序厅/<br>发展历程</span>
-                        <span class="westCtrlTabTit">清洁能源产业链</span>
-                        <span class="westCtrlTabTit">开启能源物联时代</span>
-                        <span class="westCtrlTabTit">泛能网<br>平台</span>
-                        <span class="westCtrlTabTit">美丽生态</span>
-                        <span class="westCtrlTabTit">企业文化</span>
+                        <span class="westCtrlTabTit westCtrlTabTita"><p>序厅/</p><p>发展历程</p></span>
+                        <span class="westCtrlTabTit"><p>清洁能源</p><p>产业链</p></span>
+                        <span class="westCtrlTabTit"><p>开启能源</p><p>物联时代</p></span>
+                        <span class="westCtrlTabTit"><p>泛能网</p><p>平台</p></span>
+                        <span class="westCtrlTabTit" style="line-height: 90px">美丽生态</span>
+                        <span class="westCtrlTabTit" style="line-height: 90px">企业文化</span>
                     </div>
 
                     <div id="westCtrlWrap">
@@ -98,12 +99,12 @@
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
                                                 </div>
-                                                <div class="voiceControl">
-                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl2,volNum2)">-</a>
-                                                    <span class="adjustWrap" id="adjustWrap01">
+                                                <div class="voiceControl" id="westVolCtrl02">
+                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                    <span class="adjustWrap" id="westVolLine02">
                                                         <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                                     </span>
-                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl2,volNum2)">+</a>
+                                                    <a class="smallBtn btnDefault volUp">+</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -156,16 +157,327 @@
                             <div class="ctrlWrap">
                                 <div class="publicMore">
                                     <span class="line"></span>
-                                    <span class="more" id="westEnergyMore" onclick="moreTab(westEnergyMore,westEnergyColumn1,westEnergyColumn2)"></span>
+                                    <span class="more" id="westClearMore" onclick="moreTab(westClearMore,westClearColumn1,westClearColumn2)"></span>
                                 </div>
-                                <div id="westEnergyColumn1">
-                                    <div class="westEnergyColumn1">
+                                <div id="westClearColumn1">
+                                    <div class="westClearColumn1">
+                                        <div id="clearDown" style="display: block;">
+                                            <div class="clearWrap1">
+                                                <div class="lightCtrlWrap" style="justify-content: space-between;height: 240px;">
+                                                    <span class="lightCtrl">下游展示：</span>
+                                                    <div id="doubleBtn33" class="doubleBtnWrap">
+                                                        <span class="btnTitle">射灯</span>
+                                                        <div class="doubleBtn">
+                                                            <span class="smallBtn btnDefault btnActive">ON</span>
+                                                            <span class="smallBtn btnDefault">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="player">
+                                                    <span class="playerTitle" style="background-position: 20px 0">综述影片</span>
+                                                    <div class="playerBtn">
+                                                        <div class="playerCtrl" id="movie07">
+                                                            <span class="smallBtn playBtnDefault1"></span>
+                                                            <span class="smallBtn playBtnDefault2"></span>
+                                                            <span class="smallBtn playBtnDefault3"></span>
+                                                        </div>
+                                                        <div class="voiceControl" id="westVolCtrl04">
+                                                            <a class="smallBtn btnDefault volDown">-</a>
+                                                            <span class="adjustWrap" id="westVolLine04">
+                                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                    </span>
+                                                            <a class="smallBtn btnDefault volUp">+</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearBtn">
+                                                <span onclick="clearChange('reset')"><span class="reset"></span><span>复位</span></span>
+                                                <span onclick="clearChange(this.parentNode.parentNode)"><span class="next" ></span><span>去中游</span></span>
+                                            </div>
+                                        </div>
+                                        <div id="clearMid" style="display: none;">
+                                            <div class="clearWrap1">
+                                                <div class="lightCtrlWrap" style="justify-content: space-between;height: 240px;">
+                                                    <span class="lightCtrl">中游展示：</span>
+                                                    <div id="doubleBtn34" class="doubleBtnWrap">
+                                                        <span class="btnTitle">射灯</span>
+                                                        <div class="doubleBtn">
+                                                            <span class="smallBtn btnDefault btnActive">ON</span>
+                                                            <span class="smallBtn btnDefault">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="player">
+                                                    <span class="playerTitle" style="background-position: 20px 0">综述影片</span>
+                                                    <div class="playerBtn">
+                                                        <div class="playerCtrl" id="movie08">
+                                                            <span class="smallBtn playBtnDefault1"></span>
+                                                            <span class="smallBtn playBtnDefault2"></span>
+                                                            <span class="smallBtn playBtnDefault3"></span>
+                                                        </div>
+                                                        <div class="voiceControl" id="westVolCtrl05">
+                                                            <a class="smallBtn btnDefault volDown">-</a>
+                                                            <span class="adjustWrap" id="westVolLine05">
+                                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                    </span>
+                                                            <a class="smallBtn btnDefault volUp">+</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
+                                            </div>
+                                            <div class="clearBtn">
+                                                <span onclick="clearChange('reset')"><span class="reset"></span><span>复位</span></span>
+                                                <span onclick="clearChange(this.parentNode.parentNode)"><span class="next"></span><span>去上游</span></span>
+                                            </div>
+                                        </div>
+                                        <div id="clearTop" style="display: none;">
+                                            <div class="clearWrap2">
+                                                <div class="lightCtrlWrap" style="justify-content: space-between;height: 240px;">
+                                                    <span class="lightCtrl">上游展示：</span>
+                                                    <div id="doubleBtn35" class="doubleBtnWrap">
+                                                        <span class="btnTitle">射灯</span>
+                                                        <div class="doubleBtn">
+                                                            <span class="smallBtn btnDefault btnActive">ON</span>
+                                                            <span class="smallBtn btnDefault">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="crowTitList crowSocial" id="clearList">
+                                                    <span class="crowTit crowTita" style="width: 350px;">上游综述视频</span>
+                                                    <span class="crowTit" style="width: 350px;">优势技术视频</span>
+                                                    <span class="crowTit" style="width: 350px;">智慧建造视屏</span>
+                                                    <span class="crowTit" style="width: 350px;">智慧生产视屏</span>
+                                                    <span class="crowTit" style="width: 350px;">总结影片播放</span>
+                                                </div>
+                                                <ul id="clearWrap">
+                                                    <li style="display: block">
+                                                        <div class="player">
+                                                            <span class="playerTitle" style="background-position: 20px 0">上游综述视频</span>
+                                                            <div class="playerBtn">
+                                                                <div class="playerCtrl" id="movie09">
+                                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                                </div>
+                                                                <div class="voiceControl" id="westVolCtrl06">
+                                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                                    <span class="adjustWrap" id="westVolLine06">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                                    <a class="smallBtn btnDefault volUp">+</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="display: none">
+                                                        <div class="player">
+                                                            <span class="playerTitle" style="background-position: 20px 0">优势技术视频</span>
+                                                            <div class="playerBtn">
+                                                                <div class="playerCtrl" id="movie10">
+                                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                                </div>
+                                                                <div class="voiceControl" id="westVolCtrl07">
+                                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                                    <span class="adjustWrap" id="westVolLine07">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                                    <a class="smallBtn btnDefault volUp">+</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="display: none">
+                                                        <div class="player">
+                                                            <span class="playerTitle" style="background-position: 20px 0">智慧建造视屏</span>
+                                                            <div class="playerBtn">
+                                                                <div class="playerCtrl" id="movie11">
+                                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                                </div>
+                                                                <div class="voiceControl" id="westVolCtrl08">
+                                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                                    <span class="adjustWrap" id="westVolLine08">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                                    <a class="smallBtn btnDefault volUp">+</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="display: none">
+                                                        <div class="player">
+                                                            <span class="playerTitle" style="background-position: 20px 0">智慧生产视屏</span>
+                                                            <div class="playerBtn">
+                                                                <div class="playerCtrl" id="movie12">
+                                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                                </div>
+                                                                <div class="voiceControl" id="westVolCtrl09">
+                                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                                    <span class="adjustWrap" id="westVolLine09">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                                    <a class="smallBtn btnDefault volUp">+</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="display: none">
+                                                        <div class="player">
+                                                            <span class="playerTitle" style="background-position: 20px 0">总结影片播放</span>
+                                                            <div class="playerBtn">
+                                                                <div class="playerCtrl" id="movie13">
+                                                                    <span class="smallBtn playBtnDefault1"></span>
+                                                                    <span class="smallBtn playBtnDefault2"></span>
+                                                                    <span class="smallBtn playBtnDefault3"></span>
+                                                                </div>
+                                                                <div class="voiceControl" id="westVolCtrl10">
+                                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                                    <span class="adjustWrap" id="westVolLine10">
+                                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                                </span>
+                                                                    <a class="smallBtn btnDefault volUp">+</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="clearBtn">
+                                                <span onclick="clearChange('reset')"><span class="reset"></span><span>复位</span></span>
+                                                <span onclick="clearChange(this.parentNode.parentNode)"><span class="next"></span><span>去下游</span></span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div id="westEnergyColumn2">
-                                    <div class="westEnergyColumn2">
+                                <div id="westClearColumn2" style="display: none;">
+                                    <div class="westClearColumn2" id="westClearPage1" style="display: block;">
+                                        <div class="clearWrap3">
+                                            <ul id="clearMoreWrap">
+                                                <li style="display: block">
+                                                    <div class="lightCtrlWrap" style="justify-content: space-between;height: 240px;">
+                                                        <span class="lightCtrl">灯光控制：</span>
+                                                        <div id="doubleBtn36" class="doubleBtnWrap">
+                                                            <span class="btnTitle">下游筒灯</span>
+                                                            <div class="doubleBtn">
+                                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                                <span class="smallBtn btnDefault">OFF</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li style="display: none">
+                                                    <div class="lightCtrlWrap" style="justify-content: space-between;height: 240px;">
+                                                        <span class="lightCtrl">灯光控制：</span>
+                                                        <div id="doubleBtn37" class="doubleBtnWrap">
+                                                            <span class="btnTitle">中游筒灯</span>
+                                                            <div class="doubleBtn">
+                                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                                <span class="smallBtn btnDefault">OFF</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li style="display: none">
+                                                    <div class="lightCtrlWrap" style="justify-content: space-between;height: 240px;">
+                                                        <span class="lightCtrl">灯光控制：</span>
+                                                        <div id="doubleBtn38" class="doubleBtnWrap">
+                                                            <span class="btnTitle">上游筒灯</span>
+                                                            <div class="doubleBtn">
+                                                                <span class="smallBtn btnDefault btnActive">ON</span>
+                                                                <span class="smallBtn btnDefault">OFF</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="crowTitList crowSocial2" id="clearMoreList">
+                                                <span class="crowTit crowTita">去下游</span>
+                                                <span class="crowTit">去中游</span>
+                                                <span class="crowTit">去上游</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearNextPage" id="nextPage" onclick="page(this.id)"><span class="nextPageIcon"></span>下一页<span></span></div>
+                                    </div>
+                                    <div class="westClearColumn3" id="westClearPage2" style="display: none;">
+                                        <div class="clearWrap4">
+                                            <div class="clearWrapColumn">
+                                                <div style="height:160px;" class="doubleBtnWrap">
+                                                    <span class="btnTitle">设备控制:</span>
+                                                </div>
+                                                <div id="doubleBtn39" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">下游触摸屏</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                                <div id="doubleBtn40" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">中游触摸屏</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                                <div id="doubleBtn41" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">上游触摸屏</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                                <div id="doubleBtn42" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">LED屏</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="line3"></span>
+                                            <div class="clearWrapColumn">
+                                                <div style="height:160px;" class="doubleBtnWrap">
+                                                    <span class="btnTitle"></span>
+                                                </div>
+                                                <div id="doubleBtn43" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">渲染控制机</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                                <div id="doubleBtn44" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">渲染机1</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                                <div id="doubleBtn45" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">渲染机2</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                                <div id="doubleBtn46" class="doubleBtnWrap">
+                                                    <span class="btnTitle" style="width:400px;">渲染机3</span>
+                                                    <div class="doubleBtn">
+                                                        <span class="smallBtn btnDefault btnActive">ON</span>
+                                                        <span class="smallBtn btnDefault">OFF</span>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                        </div>
+                                        <div class="clearNextPage" id="lastPage" onclick="page(this.id)"><span class="lastPageIcon"></span>上一页<span></span></div>
                                     </div>
                                 </div>
                             </div>
@@ -208,9 +520,9 @@
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
                                                 </div>
-                                                <div class="voiceControl">
+                                                <div class="voiceControl" id="westVolCtrl11">
                                                     <a class="smallBtn btnDefault volDown" onclick="downVol(volControl3,volNum3)">-</a>
-                                                    <span class="adjustWrap" id="adjustWrap02">
+                                                    <span class="adjustWrap" id="westVolLine11">
                                                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                                 </span>
                                                     <a class="smallBtn btnDefault volUp" onclick="addVol(volControl3,volNum3)">+</a>
@@ -306,12 +618,12 @@
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
                                                 </div>
-                                                <div class="voiceControl">
-                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl4,volNum4)">-</a>
-                                                    <span class="adjustWrap" id="adjustWrap03">
+                                                <div class="voiceControl" id="westVolCtrl12">
+                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                    <span class="adjustWrap" id="westVolLine12">
                                                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                                 </span>
-                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl4,volNum4)">+</a>
+                                                    <a class="smallBtn btnDefault volUp">+</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -388,12 +700,12 @@
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
                                                 </div>
-                                                <div class="voiceControl">
-                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl5,volNum5)">-</a>
-                                                    <span class="adjustWrap" id="adjustWrap04">
+                                                <div class="voiceControl" id="westVolCtrl13">
+                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                    <span class="adjustWrap" id="westVolLine13">
                                                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                                 </span>
-                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl5,volNum5)">+</a>
+                                                    <a class="smallBtn btnDefault volUp">+</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -405,12 +717,12 @@
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
                                                 </div>
-                                                <div class="voiceControl">
-                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl6,volNum6)">-</a>
-                                                    <span class="adjustWrap" id="adjustWrap05">
+                                                <div class="voiceControl" id="westVolCtrl14">
+                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                    <span class="adjustWrap" id="westVolLine14">
                                                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                                 </span>
-                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl6,volNum6)">+</a>
+                                                    <a class="smallBtn btnDefault volUp">+</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -500,12 +812,12 @@
                                                     <span class="smallBtn playBtnDefault2"></span>
                                                     <span class="smallBtn playBtnDefault3"></span>
                                                 </div>
-                                                <div class="voiceControl">
-                                                    <a class="smallBtn btnDefault volDown" onclick="downVol(volControl3)">-</a>
-                                                    <span class="adjustWrap" id="adjustWrap02">
+                                                <div class="voiceControl" id="westVolCtrl15">
+                                                    <a class="smallBtn btnDefault volDown">-</a>
+                                                    <span class="adjustWrap" id="westVolLine15">
                                                     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                                 </span>
-                                                    <a class="smallBtn btnDefault volUp" onclick="addVol(volControl3)">+</a>
+                                                    <a class="smallBtn btnDefault volUp">+</a>
                                                 </div>
                                             </div>
                                         </div>
