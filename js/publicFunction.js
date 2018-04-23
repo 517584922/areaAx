@@ -84,28 +84,47 @@ function btnAct(btn,act) {
         }
     }
 }
+
+var downId = document.getElementById("clearDown");
+var midId = document.getElementById("clearMid");
+var topId = document.getElementById("clearTop");
+var popWrap = document.getElementById("popWrap");
 // 清洁能源产业链上中下游切换
 function clearChange(u) {
     var down = "clearDown";
     var mid = "clearMid";
     var top = "clearTop";
-    var downId = document.getElementById("clearDown");
-    var midId = document.getElementById("clearMid");
-    var topId = document.getElementById("clearTop");
     if (u.id==down){
-        downId.style.display = "none";
-        midId.style.display = "block";
+        pop(midId,"是否选择去中游");
     }else if(u.id==mid){
-        midId.style.display = "none";
-        topId.style.display = "block";
+        pop(topId,"是否选择去上游");
     }else if(u.id==top){
-        topId.style.display = "none";
-        downId.style.display = "block";
+        pop(downId,"是否选择去下游");
     }else if (u=="reset"){
-        midId.style.display = "none";
-        topId.style.display = "none";
-        downId.style.display = "block";
+        pop(downId,"是否选择去下游");
     }
+}
+function pop(popId,ask) {
+    document.getElementById("popWrap").style.display = "block";
+    document.getElementById("ask").innerHTML = ask;
+    var choose = document.getElementById("popChoose").getElementsByTagName("a");
+    for (var i=0;i<choose.length;i++){
+        choose[i].index = i;
+        choose[i].onclick = function () {
+            if (this.index==1) {
+                downId.style.display = "none";
+                midId.style.display = "none";
+                topId.style.display = "none";
+                popId.style.display = "block";
+                popWrap.style.display = "none";
+
+            }else{
+                popWrap.style.display = "none";
+                return false
+            }
+        }
+    }
+
 }
 // 上下页跳转
 function page(u) {
@@ -148,6 +167,24 @@ function vol(eastVolCtrl01,eastVolLine,obj,vol) {
     }
 }
 
+// 跳转页
+function area(linkId) {
+    var westId = document.getElementById("west");
+    var eastId = document.getElementById("east");
+    var indexId = document.getElementById("index");
+    if (linkId == "back" || linkId == "goBack"){
+        westId.style.display = "none";
+        eastId.style.display = "none";
+        indexId.style.display = "block";
+    } else if( linkId == "linkWest"){
+        indexId.style.display = "none";
+        westId.style.display = "block";
+    } else if(linkId == "linkEast"){
+        indexId.style.display = "none";
+        eastId.style.display = "block";
+
+    }
+}
 
 
 
