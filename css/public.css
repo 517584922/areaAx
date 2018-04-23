@@ -30,6 +30,7 @@
     position: absolute;
     bottom: 82px;
     left: 155px;
+    text-decoration: underline;
 }
 .publicTabList{
     width:340px;
@@ -42,6 +43,7 @@
     justify-content: space-between;
 
 }
+
 .publicTabList span{
     width:318px;
     height:75px;
@@ -64,6 +66,15 @@
 .publicTabTit3a{
     background: url("../pic/publicTabElement2.png");
 }
+.back{
+    display: flex;
+}
+.back:active {
+    color:#00a6c4;
+}
+.back:active .backIcon{
+    background:url("../pic/backIconA.png");
+}
 .backIcon{
     width:45px;
     height:45px;
@@ -71,8 +82,7 @@
     margin-right: 22px;
 }
 .backText{
-    height:42px;
-    border-bottom: 2px solid #e6e6e6;
+    height:36px;
 }
 
 /*双按钮组建*/
@@ -141,9 +151,14 @@
     background: #e6e6e6;
 }
 .adjustWrap .volAct{
+    color:#e6e6e6;
     background: #00a6c4;
 }
-.volDown:focus{
+.volDown:active{
+    color:#e6e6e6;
+    background: #00a6c4;
+}
+.volUp:active{
     color:#e6e6e6;
     background: #00a6c4;
 }
@@ -256,6 +271,7 @@
     width:974px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .lightCtrl{
     width:974px;
@@ -288,22 +304,31 @@
     width:4px;
     height:767px;
     position: absolute;
-    left: 700px;
+    left: 798px;
     top: 80px;
     background: url("../pic/line2.png");
 }
+
 /*箭头列表*/
 .crowTitList{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     font-size: 34px;
+    line-height: 40px;
+
 }
 .crowTit{
     color:#e6e6e6;
+    width:100%;
+    height:40px;
+    background: url("../pic/litListBg1.png") no-repeat;
+    padding-left: 30px;
 }
 .crowTita{
     color:#00a6c4;
+    background: url("../pic/litListBg2.png") no-repeat;
+    padding-left: 30px;
+    text-decoration: underline;
 }
 .crow{
     background: url("../pic/crow.png");
@@ -318,4 +343,8 @@
     height:32px;
     margin-right: 10px;
     line-height: 40px;
+}
+.voiceControl a{
+    font-size: 52px;
+    font-weight: 800;
 }

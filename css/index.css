@@ -42,6 +42,10 @@
     position: absolute;
     right:184px;
     bottom:112px;
+    height:182px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .areaLink{
     display: flex;
@@ -55,10 +59,10 @@
     height:40px;
     margin-right: 34px;
 }
-.areaLink:focus .areaCrow{
+.areaLink:active .areaCrow{
     background: url("../pic/areaCrowFocus.png");
 }
-.areaLink:focus {
+.areaLink:active {
     color:#00a6c4;
 }
 

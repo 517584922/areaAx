@@ -30,7 +30,6 @@ function tabCtrl (tabList,tabContainer) {
             var classArr = this.className.split(" ")[0];
             var addClass = classArr.substring(0,classArr.length)+"a";
             for (var j=0;j<tabList.length;j++){
-                console.log(classArr+"a");
                 tabList[j].classList.remove(classArr+"a");
                 tabContainer[j].style.display = "none";
             }
@@ -41,6 +40,7 @@ function tabCtrl (tabList,tabContainer) {
         };
     }
 }
+
 //播放器控制
 function playCtrl (tabList) {
     for (var i=0;i<tabList.length;i++){
@@ -84,28 +84,70 @@ function btnAct(btn,act) {
         }
     }
 }
-// 音量增加
-function addVol(volControl,volNum) {
-    volNum ++;
-    if (volNum>10){
-        volNum = 10;
-    }
-    adjustVol(volNum,volControl);
-}
-// 音量减小
-function downVol(volControl,volNum) {
-    volNum --;
-    if (volNum<0){
-        volNum = 0;
-    }
-    adjustVol(volNum,volControl);
-}
-// 音量调节表
-function adjustVol(volNum,volControl) {
-    for(var j=0;j<10;j++){
-        volControl[j].setAttribute("class","");
-    }
-    for (var i=0;i<volNum;i++){
-        volControl[i].classList.add("volAct");
+// 清洁能源产业链上中下游切换
+function clearChange(u) {
+    var down = "clearDown";
+    var mid = "clearMid";
+    var top = "clearTop";
+    var downId = document.getElementById("clearDown");
+    var midId = document.getElementById("clearMid");
+    var topId = document.getElementById("clearTop");
+    if (u.id==down){
+        downId.style.display = "none";
+        midId.style.display = "block";
+    }else if(u.id==mid){
+        midId.style.display = "none";
+        topId.style.display = "block";
+    }else if(u.id==top){
+        topId.style.display = "none";
+        downId.style.display = "block";
+    }else if (u=="reset"){
+        midId.style.display = "none";
+        topId.style.display = "none";
+        downId.style.display = "block";
     }
 }
+// 上下页跳转
+function page(u) {
+    if (u=="nextPage"){
+        document.getElementById("westClearPage1").style.display = "none";
+        document.getElementById("westClearPage2").style.display = "block";
+    }else{
+        document.getElementById("westClearPage1").style.display = "block";
+        document.getElementById("westClearPage2").style.display = "none";
+    }
+}
+
+// 音量控制器
+function volCtrl(num) {this.num = num;}
+function vol(eastVolCtrl01,eastVolLine,obj,vol) {
+    for(var u=0;u<5;u++){
+        eastVolLine[u].classList.add("volAct");
+    }
+    for (var i=0;i<eastVolCtrl01.length;i++){
+        eastVolCtrl01[i].index = i;
+        eastVolCtrl01[i].onclick = function () {
+            if (this.innerHTML == "+"){
+                vol++;
+            }else if (this.innerHTML == "-"){
+                vol--;
+            }
+            if (vol>=10){
+                vol = 10;
+            }else if (vol<=0){
+                vol = 0;
+            }
+            obj.num = vol;
+            for(var j=0;j<10;j++){
+                eastVolLine[j].setAttribute("class","");
+            }
+            for (var e=0;e<obj.num;e++){
+                eastVolLine[e].classList.add("volAct");
+            }
+        };
+    }
+}
+
+
+
+
